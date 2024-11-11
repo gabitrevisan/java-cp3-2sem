@@ -4,14 +4,52 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
-    <artifactId>java-cp3-2sem</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>com.genesimilarity</groupId>
+    <artifactId>api</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>GeneSimilarity API</name>
+    <description>API for calculating genetic similarity based on nucleotide sequences</description>
 
     <properties>
-        <maven.compiler.source>22</maven.compiler.source>
-        <maven.compiler.target>22</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>23.0.1</java.version>
     </properties>
 
+    <dependencies>
+        <!-- Spring Boot Web Starter -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.7.12</version> <!-- Versão do Spring Boot -->
+        </dependency>
+
+        <!-- Spring Boot Starter Test for Unit Tests -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>2.7.12</version> <!-- Versão do Spring Boot -->
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Jackson for JSON processing (usually included by default with Spring Boot Starter Web) -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.3</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Spring Boot Maven Plugin -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.7.12</version> <!-- Versão do plugin Spring Boot -->
+            </plugin>
+        </plugins>
+    </build>
 </project>
+
